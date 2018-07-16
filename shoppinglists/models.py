@@ -1,21 +1,24 @@
 from django.db import models
 
 # Create your models here.
-from django.db import models
-
+# from django.db import models
+# import django
+# django.setup()
 
 class Shoppinglist(models.Model):
     name = models.CharField(max_length=100)
+    description = models.CharField(max_length=100, default="desc")
+    
+
 
     def __str__(self):
-        return self.name
+        return f's{self.name} {self.id or None}'
 
 
-class Items(models.Model):
+class Item(models.Model):
     name = models.CharField(max_length=100)
-    notes = models.TextField()
     shoppinglist = models.ForeignKey(
-        Shoppinglist, related_name='items', on_delete=models.CASCADE)
+        Shoppinglist, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
