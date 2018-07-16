@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'shoppinglistapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('DATABASE_URL'),
         'USER': 'joylugeba',
         'PASSWORD': 'postgres',
