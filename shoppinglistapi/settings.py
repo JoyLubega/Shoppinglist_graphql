@@ -79,7 +79,11 @@ WSGI_APPLICATION = 'shoppinglistapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shoppinglists_grapgql_dev'
+        'NAME': os.getenv('DEV_DATABASE_URL'),
+        'USER': 'joylugeba',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
