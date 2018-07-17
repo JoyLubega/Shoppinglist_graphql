@@ -21,7 +21,7 @@ jobs:
       - image: circleci/postgres:9.4
         environment:
           POSTGRES_USER: postgres
-          POSTGRES_DB: shoppinglists_test
+          POSTGRES_DB: shoppinglists_graph
           
      
 
