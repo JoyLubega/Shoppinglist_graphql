@@ -1,6 +1,7 @@
 import graphene
 
 import shoppinglists.schema
+import User.schema
 
 
 class Query(shoppinglists.schema.Query, graphene.ObjectType):
@@ -9,7 +10,8 @@ class Query(shoppinglists.schema.Query, graphene.ObjectType):
     pass
 
 class Mutation(
-    shoppinglists.schema.Mutation
+    shoppinglists.schema.Mutation,
+    User.schema.Mutation
 ):
     pass
 
