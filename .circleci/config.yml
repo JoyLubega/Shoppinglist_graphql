@@ -58,7 +58,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            coverage run --source=shoppinglists  manage.py test
+            python manage.py test
             coveralls
 
       - store_artifacts:
