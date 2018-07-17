@@ -8,4 +8,9 @@ class Query(shoppinglists.schema.Query, graphene.ObjectType):
     # as we begin to add more apps to our project
     pass
 
-schema = graphene.Schema(query=Query)
+class Mutation(
+    shoppinglists.schema.Mutation
+):
+    pass
+
+schema = graphene.Schema(query=Query,mutation=Mutation)
