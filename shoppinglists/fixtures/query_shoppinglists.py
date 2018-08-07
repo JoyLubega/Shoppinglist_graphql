@@ -16,3 +16,26 @@ expected_query_response = {
 		]
 	}
 }
+
+create_shoppinglist_mutation='''
+mutation{
+	createShoppingliist(name:"Wedding", description:"Jackie"){
+		shoppinglist{
+			id
+			name
+			description
+		}
+	}
+}'''
+
+create_shoppinglist_response={
+	"data": {
+		"createShoppingliist": {
+			"shoppinglist": {
+				"id": "17",
+				"name": "Wedding",
+				"description": "Jackie"
+			}
+		}
+	}
+}
