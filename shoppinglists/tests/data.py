@@ -4,7 +4,7 @@ from django.test import Client
 from ..fixtures.user.create_user import user_token
 
 # Inherit from this in your test cases
-class GraphQLTestCase(TestCase):
+class Base():
 
     def setUp(self):
         self._client = Client()
@@ -39,9 +39,9 @@ class GraphQLTestCase(TestCase):
         
 
         resp = self._client.post('/shoppinglists', json.dumps(body),
-                                 content_type='application/json', Authorization='JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImpveU5hbXUiLCJleHAiOjE1MzM2MjA4NDEsIm9yaWdfaWF0IjoxNTMzNjIwNTQxfQ.F5Hq9UUKUCIut2hVDiC65N3pemXq2V5QT28Pvupn3oA')
+                                 content_type='application/json', HTTP_AUTHORIZATION='JWT '+ user_token)
         jresp = json.loads(resp.content.decode())
-        print(jresp)
+        
         return jresp
 
     def assertResponseNoErrors(self, resp: dict, expected: dict):

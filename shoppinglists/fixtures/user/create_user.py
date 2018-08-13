@@ -1,7 +1,6 @@
 query_create_user="""mutation{
-	createUser(username:"joyNamu",email:"joyce@gmail.com",password:"password",firstName:"Joyce",lastName:"Namuli"){
+	createUser(username:"jdo",email:"johndoe@gmail.com",password:"password",firstName:"John",lastName:"Doe"){
 		user{
-			id
 			username
 			
 		}
@@ -13,15 +12,14 @@ create_user_response={
 	"data": {
 		"createUser": {
 			"user": {
-				"id": "1",
-				"username": "joyNamu"
+				"username": "jdo"
 			}
 		}
 	}
 }
 
 query_login='''mutation{
-	loginUser(username:"joyNamu",password:"password"){
+	loginUser(username:"jdo",password:"password"){
 token
 	}
 	

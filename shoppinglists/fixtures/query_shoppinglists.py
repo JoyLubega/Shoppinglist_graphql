@@ -19,7 +19,7 @@ expected_query_response = {
 
 create_shoppinglist_mutation='''
 mutation{
-	createShoppingliist(name:"Wedding", description:"Jackie"){
+	createShoppinglist(name:"Wedding", description:"Jackie"){
 		shoppinglist{
 			id
 			name
