@@ -19,12 +19,17 @@ create_user_response={
 }
 
 query_login='''mutation{
-	loginUser(username:"jdo",password:"password"){
+	loginUser(username:"Jackson",password:"123"){
 token
 	}
 	
 }'''
-
+query_login_invalid='''mutation{
+	loginUser(username:"Jack",password:"123"){
+token
+	}
+	
+}'''
 login_reponse={
 	"data": {
 		"loginUser": {

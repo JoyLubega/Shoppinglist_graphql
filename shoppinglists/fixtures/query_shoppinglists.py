@@ -10,8 +10,8 @@ expected_query_response = {
 	"data": {
 		"allShoppinglists": [
 			{
-				"id": "1",
-				"name": "Trip to London"
+				"id": "7",
+				"name": "Wedding"
 			}
 		]
 	}
@@ -30,12 +30,22 @@ mutation{
 
 create_shoppinglist_response={
 	"data": {
-		"createShoppingliist": {
+		"createShoppinglist": {
 			"shoppinglist": {
-				"id": "17",
+				"id": "5",
 				"name": "Wedding",
 				"description": "Jackie"
 			}
 		}
 	}
 }
+
+query_single_shoppinglist='''
+{
+	shoppinglist(id:8)
+	{
+		id
+		name
+	}
+		
+}'''
