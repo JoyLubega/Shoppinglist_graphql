@@ -1,0 +1,7 @@
+[report]
+omit =
+    */site-packages/*
+    /*migrations*
+    /*fixtures*
+   */__init__.py/*
+
