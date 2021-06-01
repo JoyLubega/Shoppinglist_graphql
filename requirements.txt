@@ -36,5 +36,5 @@ Rx==1.6.1
 singledispatch==3.4.0.3
 six==1.11.0
 typing==3.6.4
-urllib3==1.23
+urllib3==1.26.5
 wrapt==1.10.11
